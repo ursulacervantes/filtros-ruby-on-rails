@@ -49,6 +49,14 @@ Notemos que no hemos considerado `avatar` ni `user_id`. Agregaremos estos luego 
 No utilizamos un scaffold para `User` en esta aplicaión puesto que [Device](https://github.com/heartcombo/devise) nos ayudará con esta tarea. Device es una solución flexible para autenticación usando Rails.
 
 
+Tenemos que ejecutar la migración puesto que hemos creado un nuevo modelo.
+
+```ruby
+rake db:migrate
+```
+
+
+
 ### Seeds
 
 Usaremos el archivo `db/seeds.rb` para crear datos para probar la aplicación.
@@ -71,7 +79,7 @@ rails s
 
 ### Validar admin user
 
-La columna `admin` nos va a indicar si un usuario es admin o no. En todas nuestras vistas o `views` podemos utilizar un método para verificar si un usuario es admin o no:
+La columna `admin` nos va a indicar si un usuario es admin o no. En todas nuestras vistas o `views` podemos utilizar un método para verificar si un usuario es admin o no. El método `current_user` es un helper que nos provee [Device](https://github.com/heartcombo/devise)
 
 ```ruby
 if current_user.try(:admin?)
@@ -79,6 +87,24 @@ if current_user.try(:admin?)
 end
 ```
 
+En el archivo `index.html.erb`
+
+```ruby
+<% if current_user.try(:admin) || job_author(job) %>
+  <ul class="pv3">
+    <li class="inline-block f6">Admin controls: </li>
+    <li class="inline-block">
+      <%= link_to 'View', job, class: 'button is-small is-link is-outlined' %></li>
+    <li class="inline-block">
+      <%= link_to 'Edit', edit_job_path(job), class: 'button is-small is-link is-outlined' %></li>
+    <li class="inline-block">
+      <%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-link is-outlined' %></li>
+  </ul>
+<% end %>
+```
+
+El helper `job_author` nos indica si el usuario ha iniciado sesión y si el trabajo posteado le corresponde a este usuario.
+Para más detalle ver `jobs_helper.rb`
 ### Agregar filtro
 
 Vamos a crear un `partial` para nuestro panel donde listaremos los tipos de trabajos que tenemos.
@@ -112,6 +138,16 @@ Creamos el archivo `_panel.html.erb`
 </nav>
 ```
 
+En el archivo `index.html.erb` agregamos nuestro partial
+
+```html
+<div class="column is-2 bg-light">
+  <div class="pl3 pr1">
+    <%= render 'panel' %>
+  </div>
+</div>
+```
+
 En nuestro controlador `jobs_controller.rb`
 retornamos el listado de todos los trabajos publicados
 
@@ -130,6 +166,13 @@ En Jobs Controller, llamamos el método `find_by_sql` en la clase Job. Este mét
 ```ruby
 @jobs = Job.find_by_sql("SELECT * FROM jobs WHERE job_type = '"+params[:job_type]+"'")
 ```
+
+También podemos usar el siguiente comando para realizar el mismo query
+
+```ruby
+@jobs = Job.where(job_type: params[:job_type]).order("created_at desc")
+```
+
 
 > Notemos que no es necesario tener la definición de un modelo para que `find_by_sql` funcione. Este método solo ejecuta un query SQL query contra la base de datos; el query no se preocupe de tener una clase Active Record model.
 

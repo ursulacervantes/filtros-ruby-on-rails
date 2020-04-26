@@ -60,7 +60,6 @@ gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'sidekiq', '~> 5.0'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.8'
-gem 'stripe', '~> 3.11'
 gem 'trix', '~> 0.11.1'
 gem "figaro"
 

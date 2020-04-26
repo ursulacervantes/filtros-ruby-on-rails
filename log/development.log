@@ -4129,3 +4129,162 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/jobs?job_type=Full-time" for 127.0.0.1 at 2020-04-26 17:17:10 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Full-time"}
+  [1m[36mJob Load (2.4ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Full-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (3.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 444ms (Views: 375.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/jobs?job_type=Full-time" for 127.0.0.1 at 2020-04-26 17:17:13 +0200
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Full-time"}
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Full-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs?job_type=Part-time" for 127.0.0.1 at 2020-04-26 17:17:15 +0200
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Part-time"}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Part-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:17:16 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.5ms)
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:17:17 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (0.9ms)
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:17:35 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.8ms)
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:17:37 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.4ms)
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 76ms (Views: 69.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs?job_type=Full-time" for 127.0.0.1 at 2020-04-26 17:17:38 +0200
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Full-time"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Full-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs?job_type=Part-time" for 127.0.0.1 at 2020-04-26 17:17:39 +0200
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Part-time"}
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Part-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs?job_type=Part-time" for 127.0.0.1 at 2020-04-26 17:18:08 +0200
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Part-time"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Part-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs?job_type=Part-time" for 127.0.0.1 at 2020-04-26 17:19:51 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  Parameters: {"job_type"=>"Part-time"}
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT * FROM jobs WHERE job_type = 'Part-time'[0m
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (2.0ms)
+  Rendered jobs/index.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 452ms (Views: 388.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:19:53 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (2.3ms)
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  Rendered jobs/index.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:20:22 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.7ms)
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:20:30 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.8ms)
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2020-04-26 17:20:32 +0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  Rendered jobs/_panel.html.erb (1.4ms)
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at desc[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.6ms)
+
+
