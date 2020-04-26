@@ -4,6 +4,43 @@
 
 Construir un página web donde se pueda publicar y **filtrar** por tipo de ofertas de trabajo.
 
+---
+
+## Mini Magick
+
+En este repositorio se está haciendo uso de la gema [mini_magick](https://github.com/minimagick/minimagick).
+Para poder utilizar sin problemas debemos tener instalado `ImageMagick` or `GraphicsMagick`.
+
+
+#### Windows
+
+Para instalar GraphicsMagick en Windows puedes seguir los pasos indicados [aquí](http://www.graphicsmagick.org/INSTALL-windows.html)
+
+#### Mac
+
+Para instalar en OSX se puede utilizar el siguiente comando. Se requiere tener Homebrew previamente instalado.
+
+```
+brew install graphicsmagick
+```
+
+ó
+
+```
+brew install imagemagick
+
+```
+#### Ubuntu
+
+```
+sudo apt-get install imagemagick
+```
+
+#### Heorku
+
+Para desplegar la aplicación en Heroku se debe utilizar este [buildpack](https://elements.heroku.com/buildpacks/xerpa/heroku-buildpack-graphicsmagick)
+
+---
 
 ## Modelos
 
@@ -54,8 +91,6 @@ Tenemos que ejecutar la migración puesto que hemos creado un nuevo modelo.
 ```ruby
 rake db:migrate
 ```
-
-
 
 ### Seeds
 
