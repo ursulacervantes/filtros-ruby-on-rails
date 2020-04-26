@@ -1,0 +1,13 @@
+<h1>Report</h1>
+<table >
+ <tr>
+ <th>Genre</th>
+ <th>Total Sales</th>
+ </tr>
+ <% for item in @report %>
+ <tr>
+ <td><%= item.job_title %></td>
+ <td>$<%= item.description %></td>
+ </tr>
+ <% end %>
+</table>
